@@ -1,3 +1,4 @@
+// COUNTER
 // set start value
 let count = 0;
 
@@ -27,5 +28,35 @@ btns.forEach((btn) => {
       value.style.color = "#222";
     }
     value.textContent = count;
+  });
+});
+
+// CALCULATOR
+const num1 = document.getElementById("num1");
+const num2 = document.getElementById("num2");
+const result = document.querySelector(".result");
+const operators = document.querySelectorAll(".operator");
+
+// let resultat;
+
+operators.forEach((operator) => {
+  operator.addEventListener("click", function (e) {
+    const style = e.currentTarget.classList;
+    var resultat;
+
+    if (style.contains("plus")) {
+      resultat = parseFloat(num1.value) + parseFloat(num2.value);
+    }
+    if (style.contains("minus")) {
+      resultat = num1.value - num2.value;
+    }
+    if (style.contains("division")) {
+      resultat = num1.value / num2.value;
+    }
+    if (style.contains("multiplication")) {
+      resultat = num1.value * num2.value;
+    }
+    result.textContent = resultat;
+    console.log(resultat);
   });
 });
