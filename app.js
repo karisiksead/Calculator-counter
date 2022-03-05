@@ -56,7 +56,13 @@ operators.forEach((operator) => {
     if (style.contains("multiplication")) {
       resultat = num1.value * num2.value;
     }
-    result.textContent = resultat;
+    if (!isNaN(resultat)) {
+      result.textContent = resultat;
+    } else {
+      num1.value = "";
+      num2.value = "";
+    }
+
     console.log(resultat);
   });
 });
