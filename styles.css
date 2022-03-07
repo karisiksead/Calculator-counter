@@ -10,10 +10,12 @@ body {
 #value {
   font-size: 6rem;
   font-weight: bold;
+  color: white;
 }
 
 .btn {
   text-transform: uppercase;
+  /* font-size: 10px; */
 }
 
 /* calculator  */
