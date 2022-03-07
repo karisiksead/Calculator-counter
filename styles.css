@@ -1,8 +1,10 @@
-.container {
-  max-width: 400px;
-  margin: 10vh auto 0 auto;
-  box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #1e1f1d;
 }
 /* size of counter */
 #value {
@@ -14,17 +16,31 @@
   text-transform: uppercase;
 }
 
+/* calculator  */
+.container {
+  max-width: 400px;
+  margin: 50px auto auto auto;
+  padding: 10px;
+  box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+  text-align: center;
+  border-radius: 20px;
+}
+
 #display {
   text-align: right;
-  height: 70px;
-  line-height: 70px;
-  padding: 16px 8px;
-  font-size: 25px;
+  height: 20vh;
+  background-color: #1e1f1d;
+  color: white;
+  /* border: 1px solid #999; */
+  line-height: 50%;
+  padding: 10% 4%;
+  font-size: 3rem;
+  overflow: hidden;
 }
 .buttons {
   display: grid;
-  border-bottom: 1px solid #999;
-  border-left: 1px solid #999;
+  /* border: 1px solid #999; */
+  /* border-left: 1px solid #999; */
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .buttons > div {
@@ -32,12 +48,26 @@
   border-right: 1px solid #999;
 }
 .button {
-  border: 0.5px solid #999;
-  line-height: 100px;
+  /* border: 0.5px solid #999; */
+  background-color: rgb(100, 100, 100);
+  color: white;
+  border-radius: 20px;
+  margin: 2px;
+  line-height: 80px;
   text-align: center;
-  font-size: 25px;
+  font-size: 3rem;
   cursor: pointer;
 }
+.button-sign {
+  background-color: rgb(255, 166, 0);
+  color: white;
+}
+
+#cancel {
+  background-color: rgb(221, 40, 40);
+  color: white;
+}
+
 #equal {
   background-color: #5555ff;
   color: white;
