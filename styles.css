@@ -1,3 +1,12 @@
+:root {
+  --color-text: white;
+  --color-btn-operation: rgb(255, 166, 0);
+  --color-btn-cancel: rgb(221, 40, 40);
+  --color-background: #1e1f1d;
+  --color-shadow: rgba(153, 153, 153, 1);
+  --color-border: #999;
+  --color-equal: #5555ff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +16,19 @@ body {
   background: #1e1f1d;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: rgb(255, 166, 0);
+}
+
+a:active {
+  color: rgb(221, 40, 40);
+}
+
 /* size of counter */
 h1 {
   color: white;
@@ -32,6 +54,7 @@ p {
   min-height: 30px;
   flex-direction: row;
   justify-content: space-around;
+  padding-top: 20px;
 }
 /*simple calculator  */
 .container {
@@ -74,6 +97,7 @@ p {
   text-align: center;
   font-size: 3rem;
   cursor: pointer;
+  padding: 0 10px;
 }
 
 .button-sign {
@@ -81,7 +105,8 @@ p {
   color: white;
 }
 
-#cancel {
+#cancel,
+.cancel {
   background-color: rgb(221, 40, 40);
   color: white;
 }
@@ -95,6 +120,7 @@ p {
   color: white;
   transition: 0.5s ease-in-out;
 }
+
 /* orientation: landscape */
 @media all and (orientation: landscape) and (max-width: 915px) {
   .container {
