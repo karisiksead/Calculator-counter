@@ -36,6 +36,7 @@ const num1 = document.getElementById("num1");
 const num2 = document.getElementById("num2");
 const result = document.querySelector(".result");
 const operators = document.querySelectorAll(".operator");
+const sign = document.getElementById("sign");
 
 // let resultat;
 
@@ -46,15 +47,19 @@ operators.forEach((operator) => {
 
     if (style.contains("plus")) {
       resultat = parseFloat(num1.value) + parseFloat(num2.value);
+      sign.textContent = "+";
     }
     if (style.contains("minus")) {
       resultat = num1.value - num2.value;
+      sign.textContent = "-";
     }
     if (style.contains("division")) {
       resultat = num1.value / num2.value;
+      sign.textContent = "/";
     }
     if (style.contains("multiplication")) {
       resultat = num1.value * num2.value;
+      sign.textContent = "*";
     }
     if (!isNaN(resultat)) {
       result.textContent = resultat;
