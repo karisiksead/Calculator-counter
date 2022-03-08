@@ -25,7 +25,7 @@ btns.forEach((btn) => {
       value.style.color = "red";
     }
     if (count === 0) {
-      value.style.color = "#222";
+      value.style.color = "white";
     }
     value.textContent = count;
   });
@@ -62,7 +62,5 @@ operators.forEach((operator) => {
       num1.value = "";
       num2.value = "";
     }
-
-    console.log(resultat);
   });
 });

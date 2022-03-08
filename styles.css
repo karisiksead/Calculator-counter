@@ -7,15 +7,17 @@ body {
   background: #1e1f1d;
 }
 /* size of counter */
+h1 {
+  color: white;
+}
 #value {
   font-size: 6rem;
   font-weight: bold;
   color: white;
 }
-
-.btn {
-  text-transform: uppercase;
-  /* font-size: 10px; */
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* calculator  */
@@ -23,7 +25,7 @@ body {
   max-width: 400px;
   margin: 50px auto auto auto;
   padding: 10px;
-  box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+  box-shadow: 0px 0px 20px 2px rgba(153, 153, 153, 1);
   text-align: center;
   border-radius: 20px;
 }
@@ -34,8 +36,8 @@ body {
   background-color: #1e1f1d;
   color: white;
   /* border: 1px solid #999; */
-  line-height: 50%;
-  padding: 10% 4%;
+  line-height: 80%;
+  padding: 5% 4%;
   font-size: 3rem;
   overflow: hidden;
 }
@@ -60,6 +62,7 @@ body {
   font-size: 3rem;
   cursor: pointer;
 }
+
 .button-sign {
   background-color: rgb(255, 166, 0);
   color: white;
@@ -78,4 +81,20 @@ body {
   background-color: #323330;
   color: white;
   transition: 0.5s ease-in-out;
+}
+/* orientation: landscape */
+@media all and (orientation: landscape) and (max-width: 915px) {
+  .container {
+    max-width: 100%;
+    margin-top: 2px;
+    box-shadow: 0 0;
+  }
+  .button {
+    line-height: 35px;
+    font-size: 1.8rem;
+  }
+  #display {
+    line-height: 100%;
+    padding: 10% 4%;
+  }
 }
