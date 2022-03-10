@@ -6,6 +6,8 @@
   --color-shadow: rgba(153, 153, 153, 1);
   --color-border: #999;
   --color-equal: #5555ff;
+  --color-button-background: rgb(100, 100, 100);
+  --color-btn-hover: #323330;
 }
 * {
   margin: 0;
@@ -18,25 +20,23 @@ body {
 }
 
 a {
-  color: white;
+  text-decoration: none;
+  color: var(--color-text);
 }
 
 a:hover {
-  color: rgb(255, 166, 0);
+  color: var(--color-btn-operation);
 }
 
 a:active {
-  color: rgb(221, 40, 40);
+  color: var(--color-btn-cancel);
 }
 
 /* size of counter */
-h1 {
-  color: white;
-}
+
 #value {
   font-size: 6rem;
   font-weight: bold;
-  color: white;
 }
 .btn-container {
   display: grid;
@@ -45,7 +45,6 @@ h1 {
 
 /* calculator */
 p {
-  color: white;
   font-size: 2rem;
 }
 .number2 {
@@ -56,12 +55,13 @@ p {
   justify-content: space-around;
   padding-top: 20px;
 }
+
 /*simple calculator  */
 .container {
   max-width: 400px;
   margin: 50px auto auto auto;
   padding: 10px;
-  box-shadow: 0px 0px 20px 2px rgba(153, 153, 153, 1);
+  box-shadow: 0px 0px 20px 2px var(--color-shadow);
   text-align: center;
   border-radius: 20px;
 }
@@ -69,8 +69,7 @@ p {
 #display {
   text-align: right;
   height: 20vh;
-  background-color: #1e1f1d;
-  color: white;
+  background-color: var(--color-background);
   /* border: 1px solid #999; */
   line-height: 80%;
   padding: 5% 4%;
@@ -84,13 +83,12 @@ p {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .buttons > div {
-  border-top: 1px solid #999;
-  border-right: 1px solid #999;
+  border-top: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
 }
 .button {
   /* border: 0.5px solid #999; */
-  background-color: rgb(100, 100, 100);
-  color: white;
+  background-color: var(--color-button-background);
   border-radius: 20px;
   margin: 2px;
   line-height: 80px;
@@ -101,24 +99,33 @@ p {
 }
 
 .button-sign {
-  background-color: rgb(255, 166, 0);
-  color: white;
+  background-color: var(--color-btn-operation);
 }
 
 #cancel,
 .cancel {
-  background-color: rgb(221, 40, 40);
-  color: white;
+  background-color: var(--color-btn-cancel);
 }
 
 #equal {
-  background-color: #5555ff;
-  color: white;
+  background-color: var(--color-equal);
 }
 .button:hover {
-  background-color: #323330;
+  background-color: var(--color-btn-hover);
   color: white;
   transition: 0.5s ease-in-out;
+}
+
+h1,
+p,
+#value,
+#display,
+.button,
+.button-sign,
+#cancel,
+.cancel,
+#equal {
+  color: var(--color-text);
 }
 
 /* orientation: landscape */

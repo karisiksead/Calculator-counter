@@ -19,10 +19,10 @@ btns.forEach((btn) => {
       count = 0;
     }
     if (count > 0) {
-      value.style.color = "green";
+      value.style.color = "white";
     }
     if (count < 0) {
-      value.style.color = "red";
+      value.style.color = "rgb(221, 40, 40)";
     }
     if (count === 0) {
       value.style.color = "white";
