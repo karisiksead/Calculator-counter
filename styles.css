@@ -33,7 +33,6 @@ a:active {
 }
 
 /* size of counter */
-
 #value {
   font-size: 6rem;
   font-weight: bold;
@@ -70,7 +69,6 @@ p {
   text-align: right;
   height: 20vh;
   background-color: var(--color-background);
-  /* border: 1px solid #999; */
   line-height: 80%;
   padding: 5% 4%;
   font-size: 3rem;
@@ -78,8 +76,6 @@ p {
 }
 .buttons {
   display: grid;
-  /* border: 1px solid #999; */
-  /* border-left: 1px solid #999; */
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .buttons > div {
@@ -112,7 +108,7 @@ p {
 }
 .button:hover {
   background-color: var(--color-btn-hover);
-  color: white;
+  color: var(--color-text);
   transition: 0.5s ease-in-out;
 }
 
