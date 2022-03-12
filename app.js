@@ -54,8 +54,18 @@ operators.forEach((operator) => {
       sign.textContent = "-";
     }
     if (style.contains("division")) {
-      resultat = num1.value / num2.value;
       sign.textContent = "/";
+      // Upravljanje izuzetkom u slucaju deljenja sa nulom
+      try {
+        if (num2.value == 0) {
+          throw Error("Deljenje nulom nije dozvoljeno");
+        } else {
+          resultat = num1.value / num2.value;
+        }
+      } catch (err) {
+        // alert("Error name " + err.name);
+        alert(err.message);
+      }
     }
     if (style.contains("multiplication")) {
       resultat = num1.value * num2.value;
@@ -66,6 +76,7 @@ operators.forEach((operator) => {
     } else {
       num1.value = "";
       num2.value = "";
+      result.textContent = "";
     }
   });
 });
